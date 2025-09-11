@@ -1,0 +1,46 @@
+.blog {
+    ul {
+        padding-left: 0 !important;
+        li {
+            overflow: hidden;
+            margin-bottom: 2em;
+            padding-right: 2.5em;
+            position: relative;
+
+            &::before {
+                content: "◆";
+                position: absolute;
+                color: _palette(accent);
+                font-size: 2.5rem;
+                right:-0.1em;
+            }
+        }
+    }
+
+    .link {
+        font-size: 1em;
+        font-weight: 700;
+        color: _palette(accent)
+    }
+
+    img {
+        width: 230px;
+
+        &.left {
+            float: left;
+            margin: 2px 1.25em 0 0;
+        }
+
+        &.top {
+            margin: 4px 0 2.25em 0;
+        }
+
+        &.right {
+            float: right;
+            margin: 2px 0 0 1.25em;
+        }
+
+    }
+
+
+}
