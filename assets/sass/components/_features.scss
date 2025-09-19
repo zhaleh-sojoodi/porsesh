@@ -16,6 +16,7 @@
 
 	article {
 		@include vendor('align-items', 'center');
+		@include vendor('justify-content', 'center');
 		@include vendor('display', 'flex');
 		margin: 0 0 $gutter $gutter;
 		position: relative;
@@ -25,12 +26,28 @@
 		&:nth-last-child(2) {
 			margin-bottom: 0;
 		}
+		&:nth-of-type(2) {
+			background: _palette(primary);
+			padding: 2.5em;
+			border-radius: _size(border-radius);
+			width: calc(50% - 6em);
+
+			@include breakpoint('<=large') {
+				width: calc(50% - #{$gutter});
+				padding: 2em;
+			}
+		}
 
 
 		.content {
 			@include vendor('flex-grow', '1');
 			@include vendor('flex-shrink', '1');
 			width: 100%;
+			color:  _palette(bg);
+			h3, h4 {
+				margin-bottom: 1rem;
+			}
+		
 
 			> :last-child {
 				margin-bottom: 0;
@@ -39,28 +56,34 @@
 			ul {
 				margin-right: 2em;
 				font-size: 18px;
-				line-height: 2;
+				line-height: 2.4;
 				letter-spacing: 0.06em;
+				color: _palette(bg);
+				@include breakpoint('<=medium') {
+					font-size: 16px;
+				}
 			}
 
 			a {
 				font-weight: bold;
-				color: _palette(accent);
+				color: _palette(bg);
 			}
 		}
 
 		.image {
-			height: 400px;
+			max-height: 600px;
+			width: 100%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			overflow: hidden;
 
 			img {
-				// object-fit: contain;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				max-height: 600px;  
+				max-width: 100%;   
+				width: auto;       
+				height: auto;     
+				object-fit: contain;
 				display: block;
 			}
 		}
@@ -77,10 +100,14 @@
 	}
 
 	@include breakpoint('<=small') {
+		@include vendor('justify-content', 'center');
 		margin: 0 0 _size(element-margin) 0;
 		width: 100%;
 
 		article {
+			@include vendor('flex-direction', 'column');
+			@include vendor('align-items', 'flex-start');
+			@include vendor('justify-content', 'center');
 			margin: 0 0 $gutter 0;
 			width: 100%;
 
@@ -99,6 +126,11 @@
 
 			&:last-child {
 				margin-bottom: 0;
+			}
+
+			&:nth-of-type(2) {
+				padding: 1em;
+				width: 90%;
 			}
 
 			.icon {
@@ -125,9 +157,6 @@
 
 	@include breakpoint('<=xsmall') {
 		article {
-			@include vendor('flex-direction', 'column');
-			@include vendor('align-items', 'flex-start');
-
 			.icon {
 				height: 6em;
 				line-height: 6em;

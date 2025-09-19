@@ -25,26 +25,27 @@
 				margin-top: 15px;
 			}
 
-			&:before {
-				background: _palette(border);
-				content: '';
-				display: block;
-				height: calc(100% + #{$gutter});
-				left: ($gutter * -0.5);
-				position: absolute;
-				top: 0;
-				width: 1px;
-			}
+			// &:before {
+			// 	background: _palette(accent);
+			// 	content: '';
+			// 	display: block;
+			// 	height: calc(100% + #{$gutter});
+			// 	left: ($gutter * -0.5);
+			// 	position: absolute;
+			// 	top: 0;
+			// 	width: 1px;
+			// }
 
 			&:after {
-				background: _palette(border);
+				background: _palette(accent);
 				bottom: ($gutter * -0.5);
 				content: '';
 				display: block;
 				height: 1px;
 				position: absolute;
 				right: 0;
-				width: calc(100% + #{$gutter});
+				//width: calc(100% + #{$gutter});
+				width: 100%;
 			}
 
 			> :last-child {

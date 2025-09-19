@@ -6,35 +6,31 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<style>
-		.flip-cover {
+		.flip-cover.image {
+			display: flex;
+			justify-content: center;
+		}
+
+		.image-wrapper {
 			position: relative;
-			width: 100%;
-			margin: auto;
+			display: inline-block;
 		}
 
-		.flip-cover img {
-			width: 100%;
-			border-radius: 8px;
-			cursor: pointer;
-		}
-
-		.flip-cover .overlay {
+		.image-wrapper .overlay {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: rgba(0, 0, 0, 0.5);
-			/* darken */
 			display: flex;
-			align-items: center;
 			justify-content: center;
-			border-radius: 8px;
-			transition: background 0.3s ease;
+			align-items: center;
+			background: rgba(0, 0, 0, 0.2);
+			border-radius: 0.375em;
 		}
 
 		.flip-cover:hover .overlay {
-			background: rgba(0, 0, 0, 0.6);
+			background: rgba(0, 0, 0, 0.4);
 			/* darker on hover */
 		}
 
@@ -115,8 +111,12 @@
 				<section id="banner">
 					<div class="content">
 						<header>
-							<p>پرسش، انجمنی غیرانتفاعی است که در شهر ونکوور کانادا به ثبت رسیده و از اوایل سال ۱۴۰۲ شمسی فعالیتش را آغاز کرده است. فعالیت‌های انجمن در سه حوزه‌ی شعر، داستان، نظریه و نقد متمرکز بوده و زیر این سرفصل‌ها نشست‌هایی با تکیه بر بستر مجازی و با مشارکت شاعران، نویسندگان، پژوهشگران و نظریه‌پردازان ساکن ایران و دیگر نقاط دنیا برگزار کرده است. انتشار نشریه‌ای در قالب فصلنامه یکی دیگر از فعالیت‌های این انجمن فرهنگی است.</p>
-							<a href="about.html" class="button ">بیشتر</a>
+							<p>پرسش، انجمنی غیرانتفاعی است که در شهر ونکوور کانادا به ثبت رسیده و از اوایل سال ۱۴۰۲ شمسی
+								فعالیتش را آغاز کرده است. فعالیت‌های انجمن در سه حوزه‌ی شعر، داستان، نظریه و نقد متمرکز
+								بوده و زیر این سرفصل‌ها نشست‌هایی با تکیه بر بستر مجازی و با مشارکت شاعران، نویسندگان،
+								پژوهشگران و نظریه‌پردازان ساکن ایران و دیگر نقاط دنیا برگزار کرده است. انتشار نشریه‌ای
+								در قالب فصلنامه یکی دیگر از فعالیت‌های این انجمن فرهنگی است.</p>
+							<a href="about.html" class="button">درباره ما</a>
 						</header>
 						<ul class="icons">
 							<li><a href="https://youtube.com/@porseshculturalassociation" class="icon brands fa-youtube"
@@ -133,7 +133,7 @@
 						</ul>
 					</div>
 					<span class="image object">
-						<img src="images/porsesh-logo3.png" alt="" />
+						<img src="images/porsesh-white.jpg" alt="" />
 					</span>
 
 				</section>
@@ -148,10 +148,14 @@
 								<section>
 									<ul>
 										<li>
-											<p><b>فراخوان ارسال آثار برای شماره‌ی دوم فصلنامه‌ی انجمن فرهنگی پرسش:</b> از تمامی اهل قلم، شاعران، داستان‌نویسان، منتقدان و نظریه‌پردازان دعوت می‌کنیم آثارشان را برای انجمن ارسال نمایند.</p>
+											<p><b>فراخوان ارسال آثار برای شماره‌ی دوم فصلنامه‌ی انجمن فرهنگی پرسش:</b>
+												از تمامی اهل قلم، شاعران، داستان‌نویسان، منتقدان و نظریه‌پردازان دعوت
+												می‌کنیم آثارشان را برای انجمن ارسال نمایند.</p>
 										</li>
 										<li>
-											<p>نشست آتی انجمن برنامه‌ای با حضور خانم نغمه ثمینی خواهد بود. به‌زودی در خصوص تاریخ این جلسه و موضوع آن در رسانه‌های اجتماعی انجمن اطلاع‌رسانی خواهد شد.</p>
+											<p>نشست آتی انجمن برنامه‌ای با حضور خانم نغمه ثمینی خواهد بود. به‌زودی در
+												خصوص تاریخ این جلسه و موضوع آن در رسانه‌های اجتماعی انجمن اطلاع‌رسانی
+												خواهد شد.</p>
 
 										</li>
 
@@ -160,10 +164,19 @@
 							</div>
 							<div class="col-lg-5 col-m-12 ml-lg-4">
 								<section>
-									<img src="images/posters/16.png" alt="cover" class="right">
-									<p>فیلم نشست آخر انجمن، «محمدتقی بهار و تأثیر او بر ادبیات مشروطه»، با سخنرانی خانم دکتر شهین سراج منتشر شد. علاقه‌مندان به تماشای فیلم می‌توانند به <a class="link"
-											href="https://youtube.com/@porseshculturalassociation"> کانال
-											یوتیوب</a> انجمن مراجعه کنند.</p>
+									<ul>
+										<li>
+											<p>
+												علاقه‌مندان به نشست های پرسش می‌توانند به <a class="link"
+													href="https://youtube.com/@porseshculturalassociation"> کانال
+													یوتیوب</a> انجمن مراجعه کنند.
+											</p>
+											<img src="images/posters/16.png" alt="cover" class="right">
+											<p>فیلم نشست آخر انجمن، «محمدتقی بهار و تأثیر او بر ادبیات مشروطه»، با
+												سخنرانی خانم دکتر شهین سراج منتشر شد.</p>
+										</li>
+									</ul>
+
 								</section>
 							</div>
 						</div>
@@ -172,14 +185,16 @@
 
 				<section>
 					<header class="major">
-						<h2>نخستین فصلنامه پرسش</h2>
+						<h2>فصلنامه پرسش</h2>
 					</header>
 					<div class="features">
 						<article>
 							<div class="flip-cover image">
-								<img src="images/Cover01.png" alt="مجله">
-								<div class="overlay">
-									<button class="button primary" id="flip-open">مشاهده نسخه دیجیتال</button>
+								<div class="image-wrapper">
+									<img src="images/Cover01.png" alt="مجله">
+									<div class="overlay">
+										<button class="button primary" id="flip-open">مشاهده نسخه دیجیتال</button>
+									</div>
 								</div>
 							</div>
 							<div class="modal" id="flipbookModal">
@@ -193,15 +208,16 @@
 
 						<article>
 							<div class="content">
-								<h3>با آثاری از :</h3>
+								<h3>شماره یک - بهار ۱۴۰۴</h3>
+								<h4>با آثاری از :</h4>
 								<ul>
-									<li>وحید ذاکری, عالیه عطایی, حمید مساح</li>
-									<li>آنیما احتیاط, شهناز عرش اکمل, حسین رسول زاده</li>
-									<li>راضیه فیض آبادی, فاطمه تجریشی, شوکا حسینی</li>
-									<li>علی عبداللهی, علیرضا آبیز, مریوان حلبچه ای</li>
-									<li>مازیار نیستانی, حجت بداغی, شاهین شیرزادی</li>
-									<li>بنفشه فریس آبادی, ستار جلیل زاده, مسعود سالاری</li>
-									<li>محمدرضا فرزاد, حسین مکّی زاده, کاوه سجودی</li>
+									<li>وحید ذاکری، عالیه عطایی، حمید مساح</li>
+									<li>آنیما احتیاط، شهناز عرش‌اکمل، حسین رسول‌زاده</li>
+									<li>راضیه فیض‌آبادی، فاطمه تجریشی، شوکا حسینی</li>
+									<li>علی عبداللهی، علیرضا آبیز، مریوان حلبچه‌ای</li>
+									<li>مازیار نیستانی، حجت بداغی، شاهین شیرزادی</li>
+									<li>بنفشه فریس‌آبادی، ستار جلیل‌زاده، مسعود سالاری</li>
+									<li>محمدرضا فرزاد، حسین مکّی‌زاده، کاوه سجودی</li>
 								</ul>
 							</div>
 						</article>

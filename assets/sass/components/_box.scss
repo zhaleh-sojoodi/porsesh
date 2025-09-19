@@ -8,7 +8,7 @@
 
 .box {
 	border-radius: _size(border-radius);
-	border: solid 1px _palette(border);
+	border: solid 1px _palette(accent);
 	margin-bottom: _size(element-margin);
 	padding: 2em;
 
@@ -41,16 +41,16 @@
 
 		&::-webkit-scrollbar-thumb {
 			border-radius: 10px;
-			background-color: _palette(porsesh-bg); 
+			background-color: _palette(accent); 
 			border: 3px solid _palette(bg); 
 		}
 
 		&::-webkit-scrollbar-thumb:hover {
-			background-color: _palette(porsesh-bg);
+			background-color: _palette(accent);
 		}
 
 		/* Firefox */
-		scrollbar-width: thin; 
-		scrollbar-color: _palette(porsesh-bg) _palette(bg);
+		scrollbar-width: auto; 
+		scrollbar-color: _palette(accent) _palette(bg);
 	}
 }
