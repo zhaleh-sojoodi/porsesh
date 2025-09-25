@@ -19,10 +19,13 @@
 
 		&.left,
 		&.right {
-			max-width: 40%;
+			max-width: 30%;
 
 			img {
 				width: 100%;
+			}
+			@include breakpoint('<=medium') {
+				max-width: 50%;
 			}
 		}
 

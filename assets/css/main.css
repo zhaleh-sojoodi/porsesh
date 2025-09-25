@@ -1404,6 +1404,17 @@ section .content, article .content {
 section.special, article.special {
   text-align: center;
 }
+section .filter, article .filter {
+  margin-bottom: 1em;
+}
+section .about, article .about {
+  margin: 0 2.5em 2.5em 2.5em;
+}
+@media screen and (max-width: 1000px) {
+  section .about, article .about {
+    margin: 0 0 2.5em 0;
+  }
+}
 
 header p {
   font-family: "Noto Naskh Arabic", serif;
@@ -1700,10 +1711,15 @@ input[type=radio] + label:before {
   display: block;
 }
 .image.left, .image.right {
-  max-width: 40%;
+  max-width: 30%;
 }
 .image.left img, .image.right img {
   width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  .image.left, .image.right {
+    max-width: 50%;
+  }
 }
 .image.left {
   float: left;
